@@ -1,0 +1,32 @@
+import colorgram
+
+# colorgram creates a list of color objects that make up the colors in the image
+colors = colorgram.extract('image.jpg', 30)
+
+# Assigns the first color object in the list to the variable first_color
+# first_color = colors[0]
+#
+# # When looking on an individual object level, I can access its attributes.
+# # Assigns the first color's rgb values as the variable 'rgb'
+# rgb = first_color.rgb
+#
+# # These rgb values are in a list, and can be subscripted with [0] or called upon with
+# # functions like rgb.r
+# red_value = rgb.r
+# green_value = rgb.g
+# blue_value = rgb.b
+
+
+
+# actual color extraction:
+color_scheme = []
+
+for i in colors:
+    rgb = i.rgb
+    red_value = rgb.r
+    green_value = rgb.g
+    blue_value = rgb.b
+    rgb_colors = red_value, green_value, blue_value
+    color_scheme.append(rgb_colors)
+
+print(color_scheme)
